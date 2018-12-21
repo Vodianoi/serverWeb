@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const app = express()
 const models = require('./models/index');
+const pug = require('pug');
 // Decode json and x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
