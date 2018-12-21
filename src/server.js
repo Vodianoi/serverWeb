@@ -20,7 +20,7 @@ app.set("view engine", "pug");
 app.get('/', function (req, res) {
     models.User.findAll()
         .then((users) => {
-			pug.render("views/Creationsinge.pug")
+			res.render("Creationsinge")
             res.json(users)
         })
 });
