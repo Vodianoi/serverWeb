@@ -14,6 +14,7 @@ app.use(morgan('short'));
 // app.get('/', function (req, res) {
 //     res.send('Hello World');
 // });
+app.set("view engine", "pug");
 
 // Get all the users defined
 app.get('/', function (req, res) {
