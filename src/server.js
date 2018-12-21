@@ -19,7 +19,7 @@ app.use(morgan('short'));
 app.get('/', function (req, res) {
     models.User.findAll()
         .then((users) => {
-			res.render("views/Creationsinge.pug")
+			pug.render("views/Creationsinge.pug")
             res.json(users)
         })
 });
