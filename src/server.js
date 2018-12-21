@@ -15,6 +15,7 @@ app.use(morgan('short'));
 //     res.send('Hello World');
 // });
 app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "views"));
 
 // Get all the users defined
 app.get('/', function (req, res) {
