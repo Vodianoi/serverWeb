@@ -1,0 +1,21 @@
+
+block content
+	h2 Creer un singe
+	
+	
+	
+	- var url = '/monkeys'
+	from(method='POST' action=url)
+		div.from-group
+			label(for='Name') Name:
+			input#Name.from-control(type='text' , placehorder= 'Nom du singe' name='Name')
+		div.from-group
+			label(for='Race') Race:
+			input#Name.from-control(type='text' , placehorder= 'Race du singe' name='Race')
+		div.from-group
+			label(for='Taille') Taille:
+			input#Name.from-control(type='text' , placehorder= 'Taille du singe' name='Taille')
+		div.from-group
+			label(for='Color') Color:
+			input#Name.from-control(type='text' , placehorder= 'Couleur du singe' name='Color')
+		button.btn.btn-success(type='Valider') Valider

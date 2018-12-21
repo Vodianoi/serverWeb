@@ -18,6 +18,7 @@ app.use(morgan('short'));
 app.get('/', function (req, res) {
     models.User.findAll()
         .then((users) => {
+			res.render("views/Creationsinge.pug")
             res.json(users)
         })
 });
@@ -34,7 +35,7 @@ app.post('/', function (req, res) {
 
 
 // Get all the gremlins defined
-app.get('/gremlins', function (req, res) {
+app.get('/singes', function (req, res) {
     models.Gremlin.findAll()
         .then((gremlins) => {
             res.json(gremlins)
@@ -64,6 +65,8 @@ app.param(['id'], (req, res, next, id) => {
     req.id = id;
     next();
 });
+
+
 
 // Synchronize models
 models.sequelize.sync().then(function () {
